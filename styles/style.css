@@ -1,0 +1,144 @@
+:root {
+    --primary-color: #2f80ed; /* Azul */
+    --secondary-color: #56ccf2; /* Azul claro */
+    --background-color: #f3f4f6; /* Gris claro */
+    --text-color: #333;
+    --white: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 24px var(--shadow-color);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+}
+
+header h2 {
+    font-size: 1.5em;
+    color: var(--secondary-color);
+}
+
+header p {
+    font-size: 1em;
+    color: var(--text-color);
+    margin: 5px 0;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--secondary-color);
+    margin-top: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    cursor: pointer;
+    font-size: 1.3em;
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.section-title:hover {
+    color: var(--secondary-color);
+}
+.section-content {
+    display: block;
+    max-height: 0; /* Inicialmente oculto */
+    overflow: hidden;
+    padding: 0 10px;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Transición suave */
+}
+
+.section-content.show {
+    max-height: 1000px; /* Un valor alto para permitir que el contenido se muestre completamente */
+    padding: 10px;
+}
+
+
+section ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: var(--white);
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+.btn {
+    padding: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
